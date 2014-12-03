@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= mustache
 //= require foundation
 //= require turbolinks
 //= require namespace
@@ -21,4 +22,5 @@ $(function(){
   $(document).foundation();
 
   App.Controllers.ColorChanger.initialize();
+  App.Controllers.AddRemove.initialize();
 });

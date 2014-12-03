@@ -1,1 +1,12 @@
-<%= render partial: 'color_changer' %>
+<dl class="tabs" data-tab>
+  <dd class="active"><a href="#panel-color-changer">Color changer</a></dd>
+  <dd><a href="#panel-add-remove">Add/Remove</a></dd>
+</dl>
+<div class="tabs-content">
+  <div class="content active" id="panel-color-changer">
+    <%= render partial: 'color_changer' %>
+  </div>
+  <div class="content" id="panel-add-remove">
+    <%= render partial: 'add_remove' %>
+  </div>
+</div>

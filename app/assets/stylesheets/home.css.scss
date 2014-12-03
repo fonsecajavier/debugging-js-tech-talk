@@ -3,5 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .color-changer {
-  border: 1px solid black;
+  height: 100%;
+}
+.tabs-content {
+  height: 100%;
+  .content {
+    height: 100%;
+  }
 }
