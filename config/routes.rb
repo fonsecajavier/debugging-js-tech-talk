@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'random_color' => 'home#random_color'
+  get 'dynamic_script' => 'home#dynamic_script'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
