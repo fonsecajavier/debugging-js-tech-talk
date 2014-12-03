@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= mustache
 //= require foundation
-//= require turbolinks
 //= require namespace
 //= require_tree .
 
