@@ -23,4 +23,5 @@ $(function(){
 
   App.Controllers.ColorChanger.initialize();
   App.Controllers.AddRemove.initialize();
+  App.Controllers.Misc.initialize();
 });

@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 # zurb-foundation
 gem 'foundation-rails', '5.4.5.0'
 
+# pry-rails
+gem 'pry-rails',        group: :development
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

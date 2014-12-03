@@ -43,9 +43,9 @@ App.Controllers.AddRemove = {
   },
 
   appendListElement: function(content) {
-    var rendered = Mustache.render(this.addRemoveElemTmpl, {content: content})
-    var $elem = this.$list.append(rendered);
-    this.bindRemove($elem);
+    var $rendered = $(Mustache.render(this.addRemoveElemTmpl, {content: content}));
+    this.$list.append($rendered);
+    this.bindRemove($rendered);
   },
 
   bindRemove: function($elem) {

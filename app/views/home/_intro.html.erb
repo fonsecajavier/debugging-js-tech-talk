@@ -1,0 +1,103 @@
+<div class="intro">
+  <p>When debugging Javascript code, we're not limited to console.log() or alert()</p>
+  <p>Chrome and its V8 engine are powerful enough to give you more options that will speed up your debugging work.</p>
+  <h4>Some useful integrated debugging tools:</h4>
+  <ul>
+    <li>
+      The <span class="code">debugger</span> keyword
+    </li>
+    <li>
+      Breakpoints on scripts
+    </li>
+    <li>
+      Breakpoints on XHR
+    </li>
+    <li>
+      Breakpoints on DOM mutation events
+      <ul>
+        <li>Subtree modifications</li>
+        <li>Attribute Modifications</li>
+        <li>Node Removal</li>
+      </ul>
+    </li>
+    <li>
+      Breakpoints on Javascript Event Listeners
+    </li>
+    <li>
+      Long Resume
+      <ul>
+        <li>Don't get stuck on those breakpoints.  You can give it a breath of 500ms</li>
+        <li>While in a breakpoint, press and hold the resume button for a second.</li>
+        <li>Another additional resume button will appear, just click on it.</li>
+      </ul>
+    </li>
+    <li>
+      Watch Expressions
+      <ul>
+        <li>It lets you 'favorite' variables, instead of putting <span class="code">console.log()</span> everywhere</li>
+        <li>But as its name indicates, it also lets you watch expressions, which are evaluated</li>
+        <li>Pro-tip: try watching <span class="code">Object(someVar)</span> for determining object types</li>
+      </ul>
+    </li>
+    <li>
+      Live Editing
+      <ul>
+        <li>
+          It exists!  For real!  All you always needed to know was to hit CMD+S / CTRL+S
+        </li>
+      </ul>
+    </li>
+    <li>
+      Pretty Print, for that ugly minified code.
+      <ul>
+        <li>Hit the curly <span class="curly-icon">{ }</span> braces icon at the bottom of the source</li>
+      </ul>
+    </li>
+  </ul>
+  <h4>Pro-Tips:</h4>
+  <ul>
+    <li>
+      Finding jQuery event handlers
+      <ul>
+        <li>
+          Given a jQuery <span class="code">obj</span> selector
+          <ul>
+            <li>
+              jQuery < 1.8:<br/>
+              <span class="code">obj.data('events')</span>
+            </li>
+            <li>
+              jQuery >= 1.8:<br/>
+              <span class="code">$._data(obj[0], "events")</span><br />
+              ^ Notice that we need to pass the [0] DOM element, not the full jQuery selector
+            </li>
+          </ul>
+        </li>
+        <li>Expand the result, which is a hash that contains an array with listeners for each type of event.</li>
+        <li>Open an element (listener) of the array, right click on the handler property, then select "Show function definition"</li>
+        <li>Profit!</li>
+      </ul>
+    </li>
+    <li>
+      Accessing the currrently selected element from JS console:
+      <ul>
+        <li>Inspect the element</li>
+        <li>Go to your console, type <span class="code">$0</span></li>
+        <li>Pro-pro-tip: try this if using jQuery: <span class="code">$._data($0, "events")</span></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>More information:</h4>
+  <ul>
+    <li>
+      <%= link_to "https://developer.chrome.com/devtools/docs/javascript-debugging" %>
+    </li>
+    <li>
+      <%= link_to "https://developer.chrome.com/devtools/docs/tips-and-tricks" %>
+    </li>
+    <li>
+      <%= link_to "http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/" %>
+    </li>
+  </ul>
+</div>
